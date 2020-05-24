@@ -52,7 +52,7 @@ function runCode(apiBody,ch,msg)
                 {
                     'output':output,
                     'stderr':`${stderr}`,
-                    'stdout':`${stdout}`,
+                    'status':`${stdout}`,
                     'submission_id':apiBody.folder
                 }
                 
