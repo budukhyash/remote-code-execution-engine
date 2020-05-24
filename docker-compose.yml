@@ -1,0 +1,21 @@
+version: '2.3'
+services:
+    rabbitmq:
+        image: 'rabbitmq'
+        restart: always
+    redis-server:
+        image: 'redis'
+        restart: always
+    server: 
+        build: ./server
+        restart: always
+        ports:
+            - "7000:7000"
+    worker:
+        build: ./workers
+        restart: always
+        pids_limit: 60
+        cpus: 1
+        mem_limit: 150M
+        
+
