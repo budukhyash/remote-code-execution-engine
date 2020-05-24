@@ -57,7 +57,8 @@ path = '../temp/' +folder +'/'
 
 os.chdir(path)
 lang = params[2]
-timeout = params[3]
+timeout = str(min(15,int(params[3])))
+
 
 testin =  "input.txt"
 testout =  "output.txt"
