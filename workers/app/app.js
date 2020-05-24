@@ -1,4 +1,4 @@
-var fs  = require('fs');
+const fs  = require('fs');
 const amqp = require('amqp-connection-manager');
 const redis = require('redis');
 const bail = require('bail');
@@ -106,7 +106,7 @@ function createFiles(apiBody,ch,msg)
 
 }
 
-var QUEUE_NAME = 'judge'
+const QUEUE_NAME = 'judge'
 var onMessage = function(data) {
 
     let message = JSON.parse(data.content.toString());
