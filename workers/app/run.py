@@ -35,10 +35,8 @@ def run(file,input,timeout,lang):
     if r==0:
         return 200
     elif r==31744:
-        print("TIMEOUT")
         return 408
     else:
-        print("ERROR")
         return 400
 
 def match(output):
@@ -66,4 +64,5 @@ testout =  "output.txt"
 status=compile(file,lang)
 if status ==200:
     status=run(file,testin,timeout,lang)
+print(codes[status])
 
