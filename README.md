@@ -37,7 +37,7 @@ docker-compose up --build
 
 * [Express](https://expressjs.com/)     -  The web framework used
 * [RabbitMQ](https://www.rabbitmq.com/) -  Task queue
-* [Reddis](https://redis.io/)           -  Used for caching the results.
+* [Redis](https://redis.io/)           -  Used for caching the results.
 * [nodejs](https://nodejs.org/en/)      -  Used as the js runtime.
 
 ## Acknowledgments
