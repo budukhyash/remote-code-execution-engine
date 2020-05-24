@@ -43,11 +43,11 @@ app.post("/submit", (req, res) => {
     }
 
     sendMessage(data);
-    res.status(202).send('http://localhost:7000/redis/'+data.folder);
+    res.status(202).send('http://localhost:7000/results/'+data.folder);
 
 });
 
-app.get("/redis/:id", (req, res) => {
+app.get("/results/:id", (req, res) => {
     
     let key = req.params.id;
     client.get(key, (err, status) => {
