@@ -19,7 +19,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 1. Clone the repo
 ```sh
-git clone https://github.com/your_username_/Project-Name.git
+git clone https://github.com/budukhyash/remote-code-execution-engine
 ```
 2. Run in the cloned directory
 ```sh
