@@ -14,7 +14,8 @@ def compile(file,lang):
             os.system('g++ ' + file)
         elif lang=='java':
             os.system('javac ' + file)
-        if (os.path.isfile('a.out')) or (os.path.isfile('main.class')):
+
+        if (os.path.isfile('a.out')) or (os.path.isfile(get_java_class_name(os.getcwd()))):
             return 200
         else:
             return 400
@@ -24,7 +25,8 @@ def compile(file,lang):
 def run(file,input,timeout,lang):
     cmd='sudo -u judge '
     if lang == 'java':
-        cmd += 'java main'
+        class_name = get_java_class_name(os.getcwd())
+        cmd += 'java ' + class_name.split('.')[0]
     elif lang=='c' or lang=='cpp':
         cmd += './a.out'
     elif lang=='python3':
@@ -46,6 +48,14 @@ def match(output):
         return b
     else:
         return 404
+
+def get_java_class_name(path):
+    os.chdir(path)
+    class_name = ''
+    for filename in os.listdir():
+        if filename.endswith(".class"):
+            class_name = filename
+    return class_name                 
 
 params=sys.argv
 file = params[1].split('/')[3]

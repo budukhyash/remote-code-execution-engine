@@ -3,6 +3,7 @@ RUN apt-get update -y
 RUN apt-get install curl vim sudo build-essential -y
 RUN curl -sL https://deb.nodesource.com/setup_16.x | bash
 RUN apt-get install nodejs -y
+RUN apt-get install default-jdk -y
 RUN node -v
 RUN npm -v
 
