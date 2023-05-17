@@ -51,6 +51,7 @@ def match(output):
 
 def get_java_class_name(path):
     os.chdir(path)
+    class_name = ''
     for filename in os.listdir():
         if filename.endswith(".class"):
             class_name = filename
